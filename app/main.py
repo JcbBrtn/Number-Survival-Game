@@ -49,10 +49,10 @@ def game():
     op1, val1 = get_choice()
     op2, val2 = get_choice()
 
-    if op1 == op2 == 'm' and val1 == val2 == 0:
+    if op1 == op2 and op1=='m' and val1 == val2 and val1==0:
         op2, val2 = get_choice()
 
-    game_val=calc_health(int(request.form['game_val']), op1, val1)
+    game_val=0 #calc_health(int(request.form['game_val']), op1, val1)
 
     # if game_val<=0:
     #     game_val=user_val

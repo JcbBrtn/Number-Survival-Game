@@ -41,38 +41,42 @@
         <p class="lead">Count: {{ count }}</p>
         <div class="container">
             <div class="row justify-content-center">
-                <form class="col-1 justify-content-right" action="/game" method="POST">
-                    {% if op1=="s" %}
-                    <button type="submit" class="btn btn-info btn-lg">{{val1}}</button>
-                    {% elif op1=="a" %}
-                    <button type="submit" class="btn btn-info btn-lg">+{{val1}}</button>
-                    {% elif op1=="m" %}
-                    <button type="submit" class="btn btn-info btn-lg">x{{val1}}</button>
-                    {% elif op1=="d" %}
-                    <button type="submit" class="btn btn-info btn-lg">/{{val1}}</button>
-                    {% endif %}
-                    <input type="hidden" id="user_val" name="user_val" value="{{ user_val }}">
-                    <input type="hidden" id="game_val" name="game_val" value="{{ game_val }}">
-                    <input type="hidden" id="count" name="count" value="{{ count }}">
-                    <input type="hidden" id="val" name="val" value="{{ val1 }}">
-                    <input type="hidden" id="op" name="op" value="{{ op1 }}">
-                </form>
-                <form class="col-1 justify-content-left" action="/game" method="POST">
-                    {% if op2=="s" %}
-                    <button type="submit" class="btn btn-info btn-lg">{{val2}}</button>
-                    {% elif op2=="a" %}
-                    <button type="submit" class="btn btn-info btn-lg">+{{val2}}</button>
-                    {% elif op2=="m" %}
-                    <button type="submit" class="btn btn-info btn-lg">x{{val2}}</button>
-                    {% elif op2=="d" %}
-                    <button type="submit" class="btn btn-info btn-lg">/{{val2}}</button>
-                    {% endif %}
-                    <input type="hidden" id="user_val" name="user_val" value="{{ user_val }}">
-                    <input type="hidden" id="game_val" name="game_val" value="{{ game_val }}">
-                    <input type="hidden" id="count" name="count" value="{{ count }}">
-                    <input type="hidden" id="val" name="val" value="{{ val2 }}">
-                    <input type="hidden" id="op" name="op" value="{{ op2 }}">
-                </form>
+                <div class="col-6">
+                    <div class="btn-group">
+                        <form action="/game" method="POST">
+                            {% if op1=="s" %}
+                            <button type="submit" class="btn btn-outline-info btn-lg">{{val1}}</button>
+                            {% elif op1=="a" %}
+                            <button type="submit" class="btn btn-outline-info btn-lg">+{{val1}}</button>
+                            {% elif op1=="m" %}
+                            <button type="submit" class="btn btn-outline-info btn-lg">x{{val1}}</button>
+                            {% elif op1=="d" %}
+                            <button type="submit" class="btn btn-outline-info btn-lg">/{{val1}}</button>
+                            {% endif %}
+                            <input type="hidden" id="user_val" name="user_val" value="{{ user_val }}">
+                            <input type="hidden" id="game_val" name="game_val" value="{{ game_val }}">
+                            <input type="hidden" id="count" name="count" value="{{ count }}">
+                            <input type="hidden" id="val" name="val" value="{{ val1 }}">
+                            <input type="hidden" id="op" name="op" value="{{ op1 }}">
+                        </form>
+                        <form action="/game" method="POST">
+                            {% if op2=="s" %}
+                            <button type="submit" class="btn btn-outline-info btn-lg">{{val2}}</button>
+                            {% elif op2=="a" %}
+                            <button type="submit" class="btn btn-outline-info btn-lg">+{{val2}}</button>
+                            {% elif op2=="m" %}
+                            <button type="submit" class="btn btn-outline-info btn-lg">x{{val2}}</button>
+                            {% elif op2=="d" %}
+                            <button type="submit" class="btn btn-outline-info btn-lg">/{{val2}}</button>
+                            {% endif %}
+                            <input type="hidden" id="user_val" name="user_val" value="{{ user_val }}">
+                            <input type="hidden" id="game_val" name="game_val" value="{{ game_val }}">
+                            <input type="hidden" id="count" name="count" value="{{ count }}">
+                            <input type="hidden" id="val" name="val" value="{{ val2 }}">
+                            <input type="hidden" id="op" name="op" value="{{ op2 }}">
+                        </form>
+                    </div>
+                </div>
             </div>
             <div class="row justify-content-center">
                 <h3 id="time" class="float-md-start mb-0">2</h3>
