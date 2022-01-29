@@ -38,7 +38,6 @@ def calc_health(user_val, op, val):
 @app.route('/game', methods=['GET','POST'])
 def game():
     count = int(request.form['count']) + 1
-
     if count > 1:
         user_val = calc_health(int(request.form['user_val']), request.form['op'], int(request.form['val']))
     else:
